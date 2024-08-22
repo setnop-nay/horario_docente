@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class LoginController {
-
+    
 	@GetMapping("/") //nome que eu quiser colocar
-	public String priincipal()
+	public String principal()
 	{
 		return "principal"; //caminho real do arquivo
 	
@@ -17,5 +17,9 @@ public String home()
 {
 	return "principal"; //caminho real do arquivo
 }
-
+@GetMapping("/docente") //nome que eu quiser colocar
+public String docente()
+{
+	return "docente"; //caminho real do arquivo
+}
 }
