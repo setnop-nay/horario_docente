@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import br.com.horario_docente.entity.DocenteEntity;
 import br.com.horario_docente.entity.SetorEntity;
 import br.com.horario_docente.repository.SetorRepository;
 
@@ -22,8 +21,10 @@ public class SetorController {
 	private SetorRepository setorRepository;
     
 	@GetMapping("/setor")
-	public String setor ()
+	public String setor (ModelMap model)
 	{
+		
+		model.addAttribute("setores", setorRepository.findAll());
 		return "setor"; 
 	
 	}

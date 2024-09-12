@@ -24,6 +24,21 @@
 <button type="submit" class="btn btn-sucess form-control">Salvar</button>
 </div>
 
+<br>
+<h5 class="card-title"> Setores cadastrados</h5>
+<table class="table table-sm table-striped table-hover table-bordered">
+<thead>
+	<tr> 
+		<th> Id </th>
+		<th> Nome </th>
+	</tr>
+</thead>
+<tbody>
+	<tr th:each="setor : ${setores}">
+		<td th:text="${setor.Idsetor}"></td>
+		<td th:text="${setor.Nome}"></td>
+</tbody>
+
 </form>
 <div th:insert="~{layout/rodape}"></div>
 
